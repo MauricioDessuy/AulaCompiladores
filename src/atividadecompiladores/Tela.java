@@ -15,8 +15,10 @@ public class Tela extends javax.swing.JFrame {
         initComponents();
     }
     public void teste(){
-        
+        System.out.println("oi");
     }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
