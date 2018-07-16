@@ -108,7 +108,8 @@ public class JExibicaoResultados extends javax.swing.JDialog {
 
         getContentPane().add(jPanel_Footer, java.awt.BorderLayout.PAGE_END);
 
-        pack();
+        setSize(new java.awt.Dimension(416, 340));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton_FecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_FecharActionPerformed
