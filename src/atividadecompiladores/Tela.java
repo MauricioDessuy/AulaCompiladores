@@ -14,9 +14,6 @@ public class Tela extends javax.swing.JFrame {
     public Tela() {
         initComponents();
     }
-    public void teste(){
-        System.out.println("oi");
-    }
     
     
 

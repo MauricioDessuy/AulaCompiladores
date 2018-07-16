@@ -97,7 +97,8 @@ public class JCompilador extends javax.swing.JFrame {
 
         getContentPane().add(jPanel_Buttons, java.awt.BorderLayout.SOUTH);
 
-        pack();
+        setSize(new java.awt.Dimension(416, 338));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton_ExecutarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ExecutarActionPerformed
