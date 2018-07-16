@@ -34,6 +34,7 @@ public class JCompilador extends javax.swing.JFrame {
        String codigo = jTextArea_Codigo.getText();
        String[] palavras = codigo.split(" ");
        for (String palavra : palavras) {
+           palavra = palavra != null ? palavra.trim() : null;
            if(hashContadorPalavras.containsKey(palavra)){
                Integer contador = hashContadorPalavras.get(palavra);
                hashContadorPalavras.put(palavra, contador+1);
@@ -44,6 +45,7 @@ public class JCompilador extends javax.swing.JFrame {
        
        JExibicaoResultados resultados = new JExibicaoResultados(this, true, hashContadorPalavras);
        resultados.setVisible(true);
+       hashContadorPalavras.clear();
    } 
    
 
