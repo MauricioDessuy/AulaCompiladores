@@ -32,7 +32,7 @@ public class JCompilador extends javax.swing.JFrame {
     
    public void contarPalavrasCodigo(){
        String codigo = jTextArea_Codigo.getText();
-       String[] palavras = codigo.split(" ");
+       String[] palavras = codigo.replaceAll("\"", " ").split(" ");
        for (String palavra : palavras) {
            
            String[] semQuebreLinha = palavra.split("\n");
