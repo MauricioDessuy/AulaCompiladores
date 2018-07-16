@@ -32,21 +32,15 @@ public class JExibicaoResultados extends javax.swing.JDialog {
         atualizarTabela();
     }
 
-    public JTable initTabela() {
+    public void initTabela() {
         DefaultTableModel tm = new DefaultTableModel();
 
         tm.addColumn("Palavra");
         tm.addColumn("Quantidade");
 
-        JTable tabela = new JTable();
+        jTable.setModel(tm);
 
-        tabela.setModel(tm);
-
-        tabela.getColumn("Palavra").setPreferredWidth(500);
-        tabela.getColumn("Quantidade").setPreferredWidth(500);
-
-        return tabela;
-
+        jTable.getColumn("Quantidade").setPreferredWidth(500);
     }
 
     public void atualizarTabela() {
@@ -59,6 +53,7 @@ public class JExibicaoResultados extends javax.swing.JDialog {
             row[1] = valor;
             tm.addRow(row);
         }
+        jTable.setModel(tm);
     }
 
     /**
