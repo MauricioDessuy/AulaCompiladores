@@ -34,12 +34,18 @@ public class JCompilador extends javax.swing.JFrame {
        String codigo = jTextArea_Codigo.getText();
        String[] palavras = codigo.split(" ");
        for (String palavra : palavras) {
-           palavra = palavra != null ? palavra.trim() : null;
-           if(hashContadorPalavras.containsKey(palavra)){
-               Integer contador = hashContadorPalavras.get(palavra);
-               hashContadorPalavras.put(palavra, contador+1);
-           }else{
-               hashContadorPalavras.put(palavra, 1);
+           
+           String[] semQuebreLinha = palavra.split("\n");
+           for (String palav : semQuebreLinha) {
+               palav = palav != null ? palav.trim() : null;
+               if (palav != null && !palav.trim().isEmpty()) {
+                   if (hashContadorPalavras.containsKey(palav)) {
+                       Integer contador = hashContadorPalavras.get(palav);
+                       hashContadorPalavras.put(palav, contador + 1);
+                   } else {
+                       hashContadorPalavras.put(palav, 1);
+                   }
+               }
            }
        }
        
